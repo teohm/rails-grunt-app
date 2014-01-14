@@ -1,0 +1,21 @@
+{
+  "name": "rails-grunt-app",
+  "version": "0.0.0",
+  "homepage": "https://github.com/shiawuen/rails-grunt-app",
+  "authors": [
+    "Tan Shiaw Uen <shiawuen@gmail.com>"
+  ],
+  "description": "Testing on integrating grunt with rails",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.0.2"
+  }
+}
