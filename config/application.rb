@@ -8,6 +8,11 @@ Bundler.require(:default, Rails.env)
 
 module RailsGruntApp
   class Application < Rails::Application
+
+    # Disable asset pipeline since we are not going
+    # to use it for our static assets compilation
+    config.assets.enabled = false
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
