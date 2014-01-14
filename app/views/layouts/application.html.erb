@@ -3,14 +3,14 @@
 <head>
   <title>RailsGruntApp</title>
 
-  <!-- build:css /styles/main.css -->
+  <!-- build:css(public) /styles/main.css -->
   <link rel="stylesheet" href="/bower_components/foundation/css/normalize.css">
   <link rel="stylesheet" href="/styles/main.css">
   <!-- endbuild -->
 
   <%= csrf_meta_tags %>
 
-  <!-- build:js /scripts/modernizr.js -->
+  <!-- build:js(public) /scripts/modernizr.js -->
   <script src="/bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
 
@@ -19,7 +19,7 @@
 
 <%= yield %>
 
-  <!-- build:js /scripts/vendor.js -->
+  <!-- build:js(public) /scripts/vendor.js -->
   <script src="/bower_components/jquery/jquery.js"></script>
   <script src="/bower_components/foundation/js/vendor/fastclick.js"></script>
   <script src="/bower_components/foundation/js/vendor/jquery.cookie.js"></script>
@@ -27,7 +27,7 @@
   <script src="/bower_components/foundation/js/vendor/placeholder.js"></script>
   <!-- endbuild -->
 
-  <!-- build:js /scripts/main.js -->
+  <!-- build:js(public) /scripts/main.js -->
   <script src="/scripts/main.js"></script>
   <!-- endbuild -->
 
