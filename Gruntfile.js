@@ -303,12 +303,14 @@ module.exports = function (grunt) {
             options: { logConcurrentOutput: true },
             server: [
                 'compass',
-                'copy',
-                'watch',
-                'exec:server'
+                'copy'
             ],
             test: [
                 // 'copy'
+            ],
+            rails: [
+                'watch',
+                'exec:server'
             ],
             dist: [
                 'compass',
@@ -335,14 +337,14 @@ module.exports = function (grunt) {
 
     grunt.registerTask('server', function (target) {
         if (target === 'dist') {
-            return grunt.task.run(['build', 'connect:dist:keepalive']);
+            return grunt.task.run(['build', 'concurrent:rails']);
         }
 
         grunt.task.run([
             'clean:server',
             'concurrent:server',
             'autoprefixer',
-            // 'concurrent:rails',
+            'concurrent:rails',
             // 'connect:livereload',
             // 'watch'
         ]);
