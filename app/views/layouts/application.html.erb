@@ -2,13 +2,34 @@
 <html>
 <head>
   <title>RailsGruntApp</title>
-  <%= stylesheet_link_tag    "application", media: "all" %>
-  <%= javascript_include_tag "application" %>
+
+  <!-- build:css /styles/main.css -->
+  <link rel="stylesheet" href="/bower_components/foundation/css/normalize.css">
+  <link rel="stylesheet" href="/styles/main.css">
+  <!-- endbuild -->
+
   <%= csrf_meta_tags %>
+
+  <!-- build:js /scripts/modernizr.js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+
 </head>
 <body>
 
 <%= yield %>
+
+  <!-- build:js /scripts/vendor.js -->
+  <script src="/bower_components/jquery/jquery.js"></script>
+  <script src="/bower_components/foundation/js/vendor/fastclick.js"></script>
+  <script src="/bower_components/foundation/js/vendor/jquery.cookie.js"></script>
+  <script src="/bower_components/foundation/js/vendor/jquery.autocomplete.js"></script>
+  <script src="/bower_components/foundation/js/vendor/placeholder.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js /scripts/main.js -->
+  <script src="/scripts/main.js"></script>
+  <!-- endbuild -->
 
 </body>
 </html>
